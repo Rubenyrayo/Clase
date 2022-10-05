@@ -9,7 +9,7 @@ Treure productes del fitxer
 
 """
 
-#Obre els arxius -->
+#Obre els arxius
 
 prod=open("programacionclase\listas\productes.txt","r")
 preu=open("programacionclase\listas\preus.txt","r")

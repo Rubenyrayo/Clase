@@ -1,5 +1,5 @@
 """
-Aquest codi es per afegir mes productes y preus al .txt
+Afegir mes productes y preus al .txt
     
 @Autor: Ruben Delgado
 @Mail: Lawlietor03@gmail.com
