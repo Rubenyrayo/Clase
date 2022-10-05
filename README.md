@@ -1,1 +1,1 @@
-Este repositorio son putas mamadas de clase, asi que espero que no me interese mucho volver a ver esto pero xD es la primera vez y espero que no la ultima mis mamadas a gihub que guapo illo hermano precioso
+Puras mamadas de clase, que guapo illo el github to pro, parece que hasta sepa programar
