@@ -9,8 +9,11 @@ Afegir mes productes y preus al .txt
 """
 
 #Obre els .txt
-prod=open("programacionclase\listas\productes.txt","a")
-preu=open("programacionclase\listas\preus.txt","a")
+from fileinput import close
+
+
+prod=open("Programacion\programacion't\listas\productes.txt","a")
+preu=open("Programacion\programacion't\listas\preus.txt","a")
 
 #Afegeix el producte amb un salt de linea a l'arxiu
 addprod=input("Que producte vols afegir?")
