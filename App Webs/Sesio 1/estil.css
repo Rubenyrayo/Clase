@@ -1,4 +1,4 @@
-h1 {
+#container {
     color: #581845;
     background-color: #cfb0a9;
     border: 1px solid black;
@@ -19,3 +19,11 @@ hr{
 s{
     color:red;
 }
+
+body{
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color:   lightgray;
+}
+
+
