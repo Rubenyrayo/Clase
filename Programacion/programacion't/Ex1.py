@@ -1,3 +1,15 @@
-palabra=input("Introduce las palabras separadas por espacios: ")
+from audioop import reverse
 
-print(palabra[::-1])
+
+palabras=[]
+
+while True:
+    palabra=input("Quina paraula vols?")
+    if palabra == " ":
+        break
+    else:
+        palabras.append(palabra)
+    
+for x in reversed(palabras):
+    print(x)
+    
