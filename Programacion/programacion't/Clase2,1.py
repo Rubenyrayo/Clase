@@ -11,8 +11,8 @@ Treure productes del fitxer
 
 #Obre els arxius
 
-prod=open("Programacion\programacion't\listas\productes.txt","r")
-preu=open("Programacion\programacion't\listas\preus.txt","r")
+prod=open("Programacion/programacion't/listas/productes.txt","r")
+preu=open("Programacion/programacion't/listas/preus.txt","r")
 
 #S'encarrega de llegir totes les lineas de l'arixiu
 listadepreu = preu.read()
@@ -22,8 +22,7 @@ listadeprod = prod.read()
 arr1=listadeprod.split()
 arr2=listadepreu.split()
 
-#paso el preu a un int
-arr2=int
+
 #Bucle per mostrar la llista de articles
 for prod in arr1:
     print(prod)

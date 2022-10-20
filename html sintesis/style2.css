@@ -18,10 +18,12 @@ aside{
     float: left;
     width: 20%;
     background-color: #d6b6d7;
+    background: 10;
     
 }
 
 form{
     margin-bottom: 10mm;
-    
+    margin: 10px;
 }
+
