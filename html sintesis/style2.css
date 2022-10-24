@@ -7,8 +7,11 @@ header{
     background: #d6b6d7;
     border-radius: 10mm;
     text-align: center;
+    border: solid 2px beige;
 }
-
+hr{
+    margin-top: 10px;
+}
 section{
     float: right;
     width: 80% ;
@@ -26,4 +29,5 @@ form{
     margin-bottom: 10mm;
     margin: 10px;
 }
+
 

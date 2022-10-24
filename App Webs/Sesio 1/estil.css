@@ -7,9 +7,14 @@
 b {
     color: peru;
 }
-
-u {
+#links {
     color: blue;
+    text-decoration: none;
+}
+
+#links:hover {
+    color: peru;
+    text-decoration: underline;
 }
 
 hr{
