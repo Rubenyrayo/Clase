@@ -42,4 +42,23 @@ body{
     background-color:   lightgray;
 }
 
+#otros {
+    color: blue;
+    text-decoration: none;
+    font-size: 20px;
+}
 
+#otros:hover {
+    color: peru;
+    text-decoration: underline;
+}
+
+#barras{
+    list-style-type: circle;
+    margin-left: 30px;
+}
+
+#puntos{
+    margin-left: 30px;
+    line-height: 15px;
+}
