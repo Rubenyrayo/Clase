@@ -38,16 +38,17 @@ while True:
                 tasques.append(notatasques)
                 
     #Menu de treballs
-    if menus==2:
+    elif menus==2:
             print("Menu de treballs","\n")
             print("Notes de treballs dipositades = ", treballs)
-        while True:
-            notatreballs=float(input("Posa nota per nota les notes corresponents (per sortir escriu 100) = "))
-            if notatreballs==100:
-                break
-            else:
-                tasques.append(notatreballs)
-        print(notatreballs, tasques)
+            while True:
+                notatreballs=float(input("Posa nota per nota les notes corresponents (per sortir escriu 100) = "))
+                if notatreballs==100:
+                    break
+                else:
+                    tasques.append(notatreballs)
+                
+    print(notatreballs, tasques)
 
 
 
