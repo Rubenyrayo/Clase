@@ -53,7 +53,7 @@ body{
     text-decoration: underline;
 }
 
-#barras{
+#circulos{
     list-style-type: circle;
     margin-left: 30px;
 }
