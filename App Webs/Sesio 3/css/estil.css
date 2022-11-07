@@ -1,0 +1,78 @@
+#titulo {
+    position: sticky;
+    color: #581845;
+    background-color: #cfb0a9;
+    border: 1px solid black;
+    top: 0px;
+}
+
+.contacto {
+    margin: 10px;
+    font-size: 15px
+}
+
+.contacto:hover {
+color: darkblue;
+}
+
+#sup {
+    text-decoration: none;
+    color: green;
+}
+
+b {
+    color: peru;
+}
+#links {
+    color: blue;
+    text-decoration: none;
+}
+
+#links:hover {
+    color: peru;
+    text-decoration: underline;
+}
+
+.fotodraugr {
+    width: 30ex;
+    height: auto;
+    left: 300px;
+}
+
+hr{
+    color: purple;
+}
+
+s{
+    color:red;
+}
+
+#texto{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+body{
+    background-color:   lightgray;
+}
+
+#otros {
+    color: blue;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#otros:hover {
+    color: peru;
+    text-decoration: underline;
+}
+
+#circulos{
+    list-style-type: circle;
+    margin-left: 30px;
+}
+
+#puntos{
+    margin-left: 30px;
+    line-height: 15px;
+}
