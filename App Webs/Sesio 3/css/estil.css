@@ -4,6 +4,7 @@
     background-color: #cfb0a9;
     border: 1px solid black;
     top: 0px;
+    z-index: 2;
 }
 
 .contacto {
@@ -43,14 +44,18 @@ b {
     text-decoration: underline;
 }
 
-.fotodraugr {
-    width: 30ex;
-    height: auto;
-    left: 300px;
+#fotodraugr {
+    height: 300px;
+    width: 200px;
+    float: right;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 10px;
 }
 
 hr{
     color: purple;
+    clear: both;
 }
 
 s{
