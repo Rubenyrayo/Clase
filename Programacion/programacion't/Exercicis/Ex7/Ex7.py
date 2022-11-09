@@ -1,0 +1,4 @@
+"""
+Vots electrals
+"""
+
