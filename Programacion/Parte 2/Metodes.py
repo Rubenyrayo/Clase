@@ -11,15 +11,18 @@ def division(dividiendo, divisor):
 def suma(suma,suma1):
     return suma+suma1
 
+def comissió(porcentage, contratos, cien):
+    return porcentage * contratos/cien
+
 soubase=1000
 contratobase=200
 
 contratosfirmados=int(input("Quantos contratos has firmado? "))
 
-nuevo=multiplicacion(contratobase,contratosfirmados)
+preucontracte=multiplicacion(contratobase,contratosfirmados)
 
-porcentage=division(multiplicacion(5,nuevo),100)
+comisión=comissió(5,preucontracte)
 
-nousou=suma(soubase,porcentage)
+nousou=suma(soubase,comisión)
 
 print(nousou)
