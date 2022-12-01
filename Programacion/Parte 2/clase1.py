@@ -25,7 +25,7 @@ notaexamen=0
 
 while True:
     print("Apartats")
-    print("\n""1. Tasques", "\n" "2. Treballs", "\n" "3. Treballs","\n" "4. Salir", "\n")
+    print("\n""1. Tasques", "\n" "2. Treballs", "\n" "3. Examens","\n" "4. Salir", "\n")
     menus=int(input("A que part vols entrar? "))
     print("\n")
 
@@ -52,7 +52,7 @@ while True:
                 treballs.append(notatreballs)
     #Menu de examen
     elif menus==3:
-        print("Menu de treballs","\n")
+        print("Menu de examens","\n")
         print("Notes de examens dipositades = ", examen)
         while True:
             notaexamen=float(input("Posa nota per nota les notes corresponents (per sortir escriu 100) = "))
@@ -64,6 +64,7 @@ while True:
     #Finalizar
     elif menus==4:
         break
+    
 print("nota tasques", tasques)
 print ("nota treballs", treballs)
 print ("nota examen", examen, "\n")
