@@ -64,6 +64,7 @@ while True:
     #Finalizar
     elif menus==4:
         break
+    
 print("nota tasques", tasques)
 print ("nota treballs", treballs)
 print ("nota examen", examen, "\n")
