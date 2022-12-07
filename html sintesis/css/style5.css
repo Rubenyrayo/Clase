@@ -1,0 +1,42 @@
+html {
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    background: purple;
+    height: 100px;
+}
+
+section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    //para_columnas_align-items: center;
+    //para_rows justify-content: space-between;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    line-height: 100px;
+    margin: 0;
+}
+
+article {
+    padding: 10px;
+    margin: 10px;
+    background: aqua;
+    flex: 1;
+}
+
+article:hover{
+    color: violet;
+}
+
+.un{
+    align-self: flex-end;
+}
