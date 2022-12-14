@@ -3,25 +3,30 @@
  
  Autor: Ruben Delgado
  Data de creació: 7/12/22
- Data de modificació: 7/12/22
+ Data de modificació: 13/12/22
 """
 import random
 
-print("Introduce 'mover' si quieres moverte, de lo contrarió introduce 'quieto', si cuando te mueves, la maquina dice pica pared, quedas automaticamente eliminado")
+frase = ["1," , "2," , "3," , "pica" , "pared"]
+def partirfrase(frase):
+    L1= random.randint(1,3)
+    print(frase[0:L1])
+    return
 
-values = list("1,2,3,picapared")
-L1= random.choice(values)
-values.remove(L1)
+print("\n""Introduce 'mover' si quieres moverte, de lo contrarió introduce 'quieto', si cuando te mueves, la maquina dice pica pared, quedas automaticamente eliminado""\n")
 
-quehace= print(input("Que vols fer? ('quieto' o 'mover')"))
+print(partirfrase(frase))
 
 while True:
-    if quehace=="mover":
-        print(L1)
-        
-    else quehace=="quieto"
+    quehace=input("Que vols fer? ('quieto', 'mover' o 'salir')")
+    if quehace=="mover" or "quieto":
         print(L1)
     
+    elif quehace=="salir":
+        break
+    
+    elif quehace!="mover" or "quieto" or "salir":
+        print("Debes de introducir una accion permitida")
         
 
 
