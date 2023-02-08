@@ -1,64 +1,114 @@
-body{
+/* base */
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+div {
+  color: black;
+}
+
+hr {
+  background-color: black;
+  border-color: black;
+  height: 2px;
+  width: 90%;
+}
+
+a {
+  color: black;
+}
+
+* {
+  padding: 0;
   margin: 0;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: 1fr 5fr;
-  grid-template-rows: 1fr 3fr;
-}
-
-header{
-  grid-row: 1;
-  grid-column: 1/3;
-  padding-left: 20px;
-  background-color: rgb(207, 232, 220);
-  border-bottom: 2px solid rgb(79, 185, 227);
-}
-
-sidebar{
-  grid-row: 2/3;
-  grid-column: 1;
-  border-right: 2px solid rgb(79, 185, 227);
-  height: 100%;
-
-}
-
-iframe{
-  width: 100%;
-  height: 100%;
-  border: 0px;
-  grid-row: 2/3;
-  grid-column: 2/5;
-}
-
-#fotodraugr {
-  height: 300px;
-  width: 200px;
-  float: right;
-  position: relative;
-  z-index: 1;
-  margin-bottom: 10px;
-}
-
-#otros {
-  color: blue;
   text-decoration: none;
-  font-size: 20px;
+  list-style: none;
+  box-sizing: border-box;
 }
 
-#otros:hover {
-  color: peru;
-  text-decoration: underline;
+nav {
+  background: lightgreen;
+  height: 80px;
+  width: 100%;
 }
 
-#circulos{
-  list-style-type: circle;
-  margin-left: 30px;
+h4 {
+  text-align: center;
 }
 
-#puntos{
-  margin-left: 30px;
-  line-height: 15px;
+.enlace {
+  position: absolute;
 }
 
+.logo {
+  height: 80px;
+}
+
+nav ul {
+  float: right;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 5px;
+}
+nav ul li a {
+  color: brown;
+  font-size: 12px;
+  padding: 7px;
+  text-transform: uppercase;
+}
+
+li a:hover {
+  background-color: green;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: brown;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
+}
+
+/* Menu responsive con transicion */
+
+@media (max-width: 800px) {
+  .checkbtn {
+    display: block;
+  }
+
+  #responsive {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: coral;
+    top: 80px;
+    right: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  li a:hover {
+    background: none;
+    color: pink;
+  }
+
+  #check:checked ~ ul {
+    right: 0;
+  }
+}

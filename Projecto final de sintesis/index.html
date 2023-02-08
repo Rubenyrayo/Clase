@@ -1,32 +1,51 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Restaurant</title>
     <link rel="stylesheet" href="css/style.css" />
-    <title>Draugrpedia</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+  </head>
+  <body>
 
-</head>
+<!--Icones lliure de llicencia-->
 
-    <!--Texto de wikipedia-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-<body>
-    <div class="container">
-        <header><h1>Draugrpedia</h1></header>
-        
-        <!--Donde aparece el texto de los distintos apartados-->
+<!--Barra de navegació-->
+    <div id=cabecera>
+      <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"> </i>
+        </label>
+        <a href="index.html" class="enlace">
+          <img src="/imagenes/Kebab_Amigo.png" alt="" class="logo">
+        </a>
 
-        <iframe name="article"></iframe>
+<!--Menu responsive-->
 
-        <!--Barra lateral-->
+      <ul id="responsive">
+        <li><a class="active" href="index.html"> Inicio </a></li>
+        <li><a href="instal·lacions.html"> Instalaciones </a></li>
+        <li><a href="menus.html"> Menus </a></li>
+        <li><a href="reservas.html"> Reservas </a></li>
+        <li><a href="especials.html"> Especiales </a></li>
+        <li><a href="nosaltres.html"> Nosotros </a></li>
+      </nav>
+    </div>
+    <section></section>
+  </body>
 
-        <sidebar>
-            <ul>
-                <li><a href="draugr.html" target="article">Draugr</a></li>
-                <li><a href="gandalf.html" target="article">Gandalf</a></li>
-            </ul>
-        </sidebar>
+  <body>
+    <!--Imatge de benvinguda-->
+
+    <div id="Bienvenido">
+        <img src="imagenes\Bienvenido-a-Kebab-amigo.png" alt="">
     </div>
 </body>
 </html>
+
+
+
