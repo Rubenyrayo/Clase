@@ -1,5 +1,5 @@
 """
-Novela grafica donde puedes tomar decisiones a parte, también añadir momentos de pelea donde puedas mejorar a tu personaje
+Calculadora avançada
 
 @Autor: Ruben Delgado
 @Mail: neburyj4@gmail.com
@@ -13,11 +13,91 @@ from tkinter import *
 from tkinter import ttk
 import math
 
-#Aqui genero definiciones para poder utilizar el programa
+#Aqui genero definiciones para poder utilizar el programa las quales mostraran las operaciones y numeros que se añaden
 def añadirValores(tecla):
-    if tecla >= '0'  and tecla <= '9' or tecla=='(' or tecla==')' or tecla==',':
+    if tecla >= '0'  and tecla <= '9' or tecla == '(' or tecla == ')' or tecla == '.':
         entrada2.set(entrada2.get() + tecla)
+        
+        
+        
+    if tecla == '*' or tecla == '/' or tecla == '+' or tecla == '-' or tecla == '**':
+        if tecla =='*':
+            entrada1.set(entrada2.get() + '*')
+        elif tecla == '/':
+            entrada1.set(entrada2.get() + '/')
+        elif tecla == '+':
+            entrada1.set(entrada2.get() + '+')
+        elif tecla == '-':
+            entrada1.set(entrada2.get() + '-')
+        elif tecla == '**':
+            entrada1.set(entrada2.get() + '**')
+        
+        entrada2.set('')
+    
+    if tecla == "=":
+        entrada1.set(entrada1.get() + entrada2.get())
+        resultado = eval(entrada1.get())
+        entrada2.set(resultado)
+        
+def añadirValoresConTeclado(event):
 
+#Es exactamente igual que la definicion añadirValores pero en este caso genero un evento con la caracteristica ".char" que lo que hace es que cada
+#vez que el programa detecte una entrada del ordenador en question la tenga en cuenta    
+
+    tecla= event.char
+    
+    if tecla >= '0'  and tecla <= '9' or tecla == '(' or tecla == ')' or tecla == '.':
+        entrada2.set(entrada2.get() + tecla)
+        
+        
+        
+    if tecla == '*' or tecla == '/' or tecla == '+' or tecla == '-':
+        if tecla =='*':
+            entrada1.set(entrada2.get() + '*')
+        elif tecla == '/':
+            entrada1.set(entrada2.get() + '/')
+        elif tecla == '+':
+            entrada1.set(entrada2.get() + '+')
+        elif tecla == '-':
+            entrada1.set(entrada2.get() + '-')
+
+        
+        entrada2.set('')
+    
+    if tecla == "=":
+        entrada1.set(entrada1.get() + entrada2.get())
+        resultado = eval(entrada1.get())
+        entrada2.set(resultado)
+
+def radianes():
+    
+    entrada1.set('')
+    resultado = math.radians(float(entrada2.get()))
+    entrada2.set(resultado)
+
+def raizCuadrada():
+    
+    entrada1.set('')
+    resultado = math.sqrt(float(entrada2.get()))
+    entrada2.set(resultado)
+    
+def borrar():
+    inicio = 0
+    final = len(entrada2.get())
+    
+    #Aqui hago dos variables para saber desde el caracter 0 que seria el primer numero de todos, hasta el ultimo caracter
+    #gracias a la variable final que recoge el total de caracteres que hay, entonces gracias a eso lo que hago a continuacion es decirle
+    #que entre 0 i la longitud del numero en question elimine 1
+    
+    entrada2.set(entrada2.get()[inicio:final - 1])
+            
+def borrarTodo():
+    
+    #Aqui simplemente no asigno nada, entonces al presionar el boton "C" hace que se actualice con esta definicion y se quede en blanco
+    
+    entrada1.set('')
+    entrada2.set('')    
+    
 #Aqui es donde se guardan la configuración para generar la ventada del programa
 w=Tk()
 w.configure(bg='#262626')
@@ -70,19 +150,21 @@ boton8= ttk.Button(pantalla1, text="8", style=("Numeros.TButton"), command=lambd
 boton9= ttk.Button(pantalla1, text="9", style=("Numeros.TButton"), command=lambda: añadirValores('9'))
 
 #Genero los botones de opciones basicas
-boton_borrar= ttk.Button(pantalla1, text=chr(9003), style=("Operaciones.TButton"))
-boton_C= ttk.Button(pantalla1, text="C", style=("Operaciones.TButton"))
+boton_borrar= ttk.Button(pantalla1, text=chr(9003), style=("Operaciones.TButton"), command=lambda: borrar())
+boton_C= ttk.Button(pantalla1, text="C", style=("Operaciones.TButton"), command=lambda: borrarTodo())
 boton_abrirparentesis= ttk.Button(pantalla1, text="(", style=("Operaciones.TButton"), command=lambda: añadirValores('('))
 boton_cerrarparentesis= ttk.Button(pantalla1, text=")", style=("Operaciones.TButton"), command=lambda: añadirValores(')'))
-boton_coma= ttk.Button(pantalla1, text=",", style=("Operaciones.TButton"), command=lambda: añadirValores(','))
+boton_coma= ttk.Button(pantalla1, text=",", style=("Operaciones.TButton"), command=lambda: añadirValores('.'))
 
 #Genero botones de operaciones basicas
-boton_division= ttk.Button(pantalla1, text=chr(247), style=("Operaciones.TButton"))
-boton_multiplicacion= ttk.Button(pantalla1, text="x", style=("Operaciones.TButton"))
-boton_resta= ttk.Button(pantalla1, text="-", style=("Operaciones.TButton"))
-boton_suma= ttk.Button(pantalla1, text="+", style=("Operaciones.TButton"))
-boton_raizcuadrada= ttk.Button(pantalla1, text=chr(8730), style=("Operaciones.TButton"))
-boton_igual= ttk.Button(pantalla1, text="=", style=("Operaciones.TButton"))
+boton_division= ttk.Button(pantalla1, text=chr(247), style=("Operaciones.TButton"), command=lambda: añadirValores('/'))
+boton_multiplicacion= ttk.Button(pantalla1, text="x", style=("Operaciones.TButton"), command=lambda: añadirValores('*'))
+boton_resta= ttk.Button(pantalla1, text="-", style=("Operaciones.TButton"), command=lambda: añadirValores('-'))
+boton_suma= ttk.Button(pantalla1, text="+", style=("Operaciones.TButton"), command=lambda: añadirValores('+'))
+boton_raizcuadrada= ttk.Button(pantalla1, text=chr(8730), style=("Operaciones.TButton"), command=lambda: raizCuadrada())
+boton_igual= ttk.Button(pantalla1, text="=", style=("Operaciones.TButton"), command=lambda: añadirValores('='))
+boton_radianes= ttk.Button(pantalla1, text="rad", style=("Operaciones.TButton"), command=lambda: radianes())
+boton_potencia= ttk.Button(pantalla1, text="^", style=("Operaciones.TButton"), command=lambda: añadirValores('**'))
 
 #poner los botones en pantalla
 boton_C.grid(column=0, row=2, sticky=(W, N, E, S))
@@ -114,11 +196,17 @@ boton_coma.grid(column=2, row=6, sticky=(W, N, E, S))
 boton_multiplicacion.grid(column=3, row=6, sticky=(W, N, E, S))
 
 #linea 6
+boton_radianes.grid(column=0, row=7, sticky=(W, N, E, S))
+boton_potencia.grid(column=1, row=7, sticky=(W, N, E, S))
 boton_raizcuadrada.grid(column=2, row=7, sticky=(W, N, E, S))
 boton_igual.grid(column=3, row=7, sticky=(W, N, E, S))
 
 #Añado una separación entre cada boton
 for espacio in pantalla1.winfo_children():
     espacio.grid_configure(ipady=5, padx=1, pady=1)
+
+#asigno que el programa detecte los botones del teclado (el botó enter no el compte com igual i el borrar no el detecta)
+
+w.bind('<Key>', añadirValoresConTeclado) 
 
 w.mainloop() 
